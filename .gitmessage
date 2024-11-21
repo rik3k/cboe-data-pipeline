@@ -1,0 +1,6 @@
+docs: update README with CBOE ticker requirements and remove config specs
+
+- Add note about required underscore prefix for CBOE tickers
+- Clarify that tickers.txt can be customized with additional symbols
+- Remove uncertain memory and timeout specifications
+- Clean up documentation formatting

@@ -8,7 +8,7 @@ This pipeline fetches delayed quotes data for major market indices (SPX, VIX, ND
 
 ## Data Source
 
-The pipeline uses CBOE's public delayed quotes API:
+The pipeline uses CBOE's delayed quotes API. Note that CBOE requires an underscore (_) prefix before each ticker symbol:
 ```
 https://cdn.cboe.com/api/global/delayed_quotes/{ticker}.json
 ```
@@ -101,16 +101,12 @@ cboe-data-pipeline/
 # AWS Configuration
 S3_BUCKET_NAME=your_s3_bucket_name
 AWS_REGION=us-east-1  # Change to your desired region
-
-# Optional: Lambda Configuration
-LAMBDA_MEMORY=512
-LAMBDA_TIMEOUT=300  # 5 minutes in seconds
 ```
 
 ### Ticker Configuration (ticker.txt)
 ```bash
 # Verify tickers here: https://cdn.cboe.com/api/global/delayed_quotes/options/_SPX.json
-# Major Indices
+# Add any desired tickers to this file, ensuring to prefix each with an underscore (_)
 _SPX    # S&P 500 Index
 _VIX    # CBOE Volatility Index
 _NDX    # Nasdaq 100 Index
@@ -174,9 +170,7 @@ docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/cboe-data-pipeline
 5. Create Lambda Function:
    - Create new function from container image
    - Set environment variables from `.env`
-   - Configure memory (512MB recommended)
-   - Set timeout (5 minutes recommended)
-   - Set up IAM role with S3 permissions
+   - Configure IAM role with S3 permissions
 
 6. Configure Lambda Trigger:
    - Add EventBridge (CloudWatch Events) trigger
