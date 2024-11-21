@@ -4,7 +4,7 @@ A serverless pipeline that fetches JSON data from the CBOE delayed quotes API ev
 
 ## Overview
 
-This pipeline fetches delayed quotes data for major market indices (SPX, VIX, NDX) from CBOE's public API and stores the complete data structure in parquet format for efficient querying and analysis.
+This pipeline fetches delayed quotes data for market indices (e.g., SPX, VIX, NDX) and other tickers via CBOE's public API. While currently configured to handle these indices, it can be easily adapted to fetch data for other tickers as needed. The data is stored in Parquet format for efficient querying and analysis.
 
 ## Data Source
 
