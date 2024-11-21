@@ -1,0 +1,5 @@
+# Verify tickers here: https://cdn.cboe.com/api/global/delayed_quotes/options/_SPX.json
+# Major Indices
+_SPX    # S&P 500 Index
+_VIX    # CBOE Volatility Index
+_NDX    # Nasdaq 100 Index
