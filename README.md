@@ -8,7 +8,7 @@ This pipeline fetches delayed quotes data for major market indices (SPX, VIX, ND
 
 ## Data Source
 
-The pipeline uses CBOE's delayed quotes API. Note that CBOE requires an underscore (_) prefix before each ticker symbol:
+The pipeline uses CBOE's delayed quotes API. Note that CBOE requires an underscore (_) prefix before each ticker symbol for indices:
 ```
 https://cdn.cboe.com/api/global/delayed_quotes/{ticker}.json
 ```
