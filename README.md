@@ -17,6 +17,7 @@ Example endpoints:
 - SPX: https://cdn.cboe.com/api/global/delayed_quotes/_SPX.json
 - VIX: https://cdn.cboe.com/api/global/delayed_quotes/_VIX.json
 - NDX: https://cdn.cboe.com/api/global/delayed_quotes/_NDX.json
+- TSLA: https://cdn.cboe.com/api/global/delayed_quotes/TSLA.json
 
 ## JSON Data Structure
 
