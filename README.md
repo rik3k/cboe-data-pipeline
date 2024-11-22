@@ -1,6 +1,6 @@
 # CBOE Data Pipeline
 
-A serverless pipeline that fetches JSON data from the CBOE delayed quotes API every 5 minutes, converts it to Parquet, and stores it in Amazon S3 using AWS Lambda.
+A serverless pipeline that fetches JSON data from the CBOE delayed options quotes API every 5 minutes, converts it to Parquet, and stores it in Amazon S3 using AWS Lambda.
 
 ## Overview
 
